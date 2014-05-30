@@ -143,7 +143,7 @@ if __name__ == "__main__":
                     if False != options.push:
                         push = commands.getoutput(
                             'cd '+ infile + 
-                            '; git push '+ 
+                            '; git push origin --all'+ 
                             ' '.join(options.remote.split(":")) 
                         )
                         result = result + " (Pushed) \n" + push                    
