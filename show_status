@@ -121,7 +121,7 @@ if __name__ == "__main__":
                 if branch == 'master':
                     branchColor = bcolors.OKGREEN
 
-                branch = "[ " + branchColor + branch.ljust(15) + bcolors.ENDC + " ]"
+                branch = "[ " + branchColor + branch + bcolors.ENDC + " ]"
 
                 if -1 == out.find('nothing'):
                     result = bcolors.FAIL + "Changes" + bcolors.ENDC
@@ -159,6 +159,9 @@ if __name__ == "__main__":
                 
             # Come out of the dir and into the next
             commands.getoutput('cd ../')
+
+        else:
+            print "Not a git repo: %s" % infile
                 
             
 
